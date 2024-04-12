@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph_merge"
+version = "2024.12.0"
+requires-python = ">=3.11"
+authors = [
+  {name = "Rebecca D. Jones", email = "rebecca.d.jones@pnnl.gov"},
+  {name = "Lucas Tate", email = "lucas.tate@pnnl.gov"},
+  {name = "Doug Dennis", email = "doug.dennis@pnnl.gov"},
+]
+
+maintainers = [
+  {name = "Rebecca D. Jones", email = "rebecca.d.jones@pnnl.gov"},
+  {name = "Lucas Tate", email = "lucas.tate@pnnl.gov"},
+  {name = "Doug Dennis", email = "doug.dennis@pnnl.gov"},
+]
+
+dependencies = [
+    "Levenshtein",
+    "scikit-learn",
+    "networkx",
+    "numpy",
+    "pandas",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "ruff==0.8.1"]
+visual = ["bokeh", "beautifulsoup4", "pygraphviz", "hvplot", "matplotlib"]
+
+[tool.ruff]
+indent-width = 4
+line-length = 120
+
+[tool.ruff.lint]
+exclude = ["tests/*"]
+select = [
+    "A",
+    "ANN",
+    "ARG",
+    "B",
+    "C",
+    "C4",
+    "C90",
+    "COM",
+    "D",
+    "DTZ",
+    "E",
+    "F",
+    "I",
+    "N",
+    "PERF",
+    "PIE",
+    "PL",
+    "PT",
+    "R",
+    "RET",
+    "RUF",
+    "S",
+    "SIM",
+    "W",
+]
+
+ignore = [
+    "B017",  # assertion
+    "B028",  # explicit stacklevel on log
+    "COM812",  # trailing comma (removed for the formatter)
+    "D105",  # missing docstring on magic methods
+    "N818",  # exception names with "Error" suffix
+    "N999",  # invalid module name
+    "PLR0913",  # too many function arguments
+    "PLW0603",  # using "global" keyword
+    "RET504",  # unnecessary assignment before return statement
+    "S101",  # assert statement used
+    "SIM112",  # captalized environment variables
+    "S603",  # untrusted input in subprocess.run (bugged)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "native"
+quote-style = "double"
+
+[tool.ruff.lint.pep8-naming]
+extend-ignore-names = ["G", "*_G", "G1", "G2", "G1_*", "G2_*"]

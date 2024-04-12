@@ -1,0 +1,173 @@
+{
+    "systems": [
+        {
+            "UUID": "5bfa70df-716d-4349-8c4c-b14deeedfcc6",
+            "captureStart": 1601418600,
+            "captureEnd": 1603231680,
+            "name": "System 1",
+            "vendor": [
+                "PNNL Analysis Team"
+            ],
+            "description": "Example system."
+        }
+    ],
+    "hardware": [
+        {
+            "UUID": "3faba2c8-452b-4bcb-bf8c-a6b7629615d2",
+            "name": "hardware 1",
+            "captureTime": 1602536455,
+            "officialName": "Hardware 1",
+            "countryOfOrigin": ["USA"],
+            "countryOfOriginSource": "Source of test data.",
+            "quantity": 2,
+            "description": "This is a test hardware component.",
+            "vendor": ["vendor 1"],
+            "identifiers": [
+                "marking 1",
+                "marking 2"
+            ],
+            "hardwareType": ["Integrated circuit"],
+            "supplementaryFiles": [
+                {
+                    "filePath": "supplementary1.txt"
+                }
+            ],
+            "packageType": "Package Type",
+            "boardLocation": ["U14"],
+            "provenance": [
+                {
+                    "fieldName": "name",
+                    "capturedBy": "Person 1",
+                    "captureTime": 1614122026
+                },
+                {
+                    "fieldName": "officialName",
+                    "capturedBy": "Person 1",
+                    "captureTime": 1614124134
+                }
+            ]
+        },
+        {
+            "UUID": "5cef2647-620a-4d9f-ac8f-485787f05f56",
+            "name": "hardware 2",
+            "captureTime": 1602536725,
+            "officialName": "Hardware 2",
+            "countryOfOrigin": ["Canada"],
+            "countryOfOriginSource": "Source of test data.",
+            "description": "This is a test hardware component.",
+            "vendor": ["vendor 2"],
+            "identifiers": [
+                "marking A",
+                "marking B"
+            ],
+            "hardwareType": ["Memory"],
+            "supplementaryFiles": [
+                {
+                    "filePath": "supplementary2.txt"
+                }
+            ],
+            "boardLocation": ["M1"],
+            "provenance": [
+                {
+                    "fieldName": "comments",
+                    "capturedBy": "Person 1",
+                    "captureTime": 1614122026
+                }
+            ]
+        },
+        {
+            "UUID": "3b64cc93-fa39-4739-a7b7-daeb0d7c429f",
+            "name": "hardware 3",
+            "captureTime": 1602536815000,
+            "officialName": "Hardware 3",
+            "countryOfOrigin": ["USA"],
+            "countryOfOriginSource": "Source of test data.",
+            "description": "This is a test hardware component.",
+            "vendor": ["vendor 1"],
+            "hardwareType": ["FPGA"]
+        }
+    ],
+    "software": [
+        {
+            "UUID": "5512a01b-75b1-4262-86ff-5e787eb0b961",
+            "vendor": ["vendor 3"],
+            "version": "1.0",
+            "sha1": "994b5a7a412cbdbdc95e38b7c45e1837dbd8e07d",
+            "sha256": "8f2512a3e192c0efea15f2af590cb4edb11d7dd41bc2735612eb3fb96135d415",
+            "md5": "f7aa3f3dbaba25214c43c8afe431807d"
+        },
+        {
+            "UUID": "34872093-00a9-4fa0-98b6-98971e08fafa",
+            "vendor": ["vendor 4"],
+            "sha1": "cd4207171c2e2e9ce05f8cb64ef82c0e90e5f5a2",
+            "sha256": "35d94879eb4738ae8c17ed6bac17f7dc031249ceab354e6d13d380d940c82497",
+            "md5": "9448ad51f43d96dedb40f5063e71e4a9"
+        },
+        {
+            "UUID": "588daac4-fbf7-4975-83ff-60f90cd8a5a3",
+            "vendor": ["vendor 5"],
+            "sha1": "de1a2734485253434227bf9e1b11bbf31d37bcf7"
+        },
+        {
+            "UUID": "0ed129f2-bdea-497f-a9d1-d1d1d6670e33",
+            "vendor": ["vendor 5"],
+            "sha256": "232c4a43212b268d6d5efb65b88fbac2d82f999d8285b8a4ee2596db05d1a524"
+        },
+        {
+            "UUID": "007b72e5-e8a9-48d4-b779-a6271d74d328",
+            "vendor": ["vendor 6"],
+            "md5": "29a295c62d4e6076979b63ea4a67c82d",
+            "components": [
+                {
+                    "name": "Flask"
+                },
+                {
+                    "name": "Open SSL",
+                    "version": "cpe:2.3:a:openssl:openssl:1.0.2:beta2:*:*:*:*:*:*"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "xUUID": "5bfa70df-716d-4349-8c4c-b14deeedfcc6",
+            "yUUID": "3faba2c8-452b-4bcb-bf8c-a6b7629615d2",
+            "relationship": "includes"
+        },
+        {
+            "xUUID": "3faba2c8-452b-4bcb-bf8c-a6b7629615d2",
+            "yUUID": "5cef2647-620a-4d9f-ac8f-485787f05f56",
+            "relationship": "contains"
+        },
+        {
+            "xUUID": "3faba2c8-452b-4bcb-bf8c-a6b7629615d2",
+            "yUUID": "3b64cc93-fa39-4739-a7b7-daeb0d7c429f",
+            "relationship": "contains"
+        },
+        {
+            "xUUID": "5bfa70df-716d-4349-8c4c-b14deeedfcc6",
+            "yUUID": "5512a01b-75b1-4262-86ff-5e787eb0b961",
+            "relationship": "includes"
+        },
+        {
+            "xUUID": "5bfa70df-716d-4349-8c4c-b14deeedfcc6",
+            "yUUID": "34872093-00a9-4fa0-98b6-98971e08fafa",
+            "relationship": "includes"
+        },
+        {
+            "xUUID": "5512a01b-75b1-4262-86ff-5e787eb0b961",
+            "yUUID": "588daac4-fbf7-4975-83ff-60f90cd8a5a3",
+            "relationship": "contains"
+        },
+        {
+            "xUUID": "34872093-00a9-4fa0-98b6-98971e08fafa",
+            "yUUID": "0ed129f2-bdea-497f-a9d1-d1d1d6670e33",
+            "relationship": "contains"         
+        },
+        {
+            "xUUID": "34872093-00a9-4fa0-98b6-98971e08fafa",
+            "yUUID": "007b72e5-e8a9-48d4-b779-a6271d74d328",
+            "relationship": "contains"
+        }
+    ]
+}
